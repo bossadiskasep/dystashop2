@@ -1,0 +1,38 @@
+https://go.paid4link.com/hz3ICfSf<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dysta Shop</title>
+</head>
+<body style="text-align:center;font-family:Arial;margin-top:100px;">
+
+<h1>🎁 Klaim Dana Kaget</h1>
+
+<button onclick="mulai()">KLAIM SEKARANG</button>
+
+<p id="timer"></p>
+
+<script>
+function mulai(){
+ let s = 10;
+
+ let x = setInterval(function(){
+
+ document.getElementById("timer").innerHTML =
+ "Tunggu " + s + " detik...";
+
+ s--;
+
+ if(s < 0){
+ clearInterval(x);
+
+ window.location.href =
+ "";
+ }
+
+ },1000);
+}
+</script>
+
+</body>
+</html>
