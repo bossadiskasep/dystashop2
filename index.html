@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dana Kaget</title>
+<title>Dysta Shop - Pusat Misi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <style>
 *{
@@ -14,89 +16,128 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:linear-gradient(180deg,#008cff,#0066ff);
+background:linear-gradient(135deg,#0077ff,#00b7ff);
 min-height:100vh;
-text-align:center;
 color:white;
+overflow-x:hidden;
 }
 
 .header{
-padding:60px 20px;
+text-align:center;
+padding:40px 20px;
 }
 
-.header h1{
-font-size:60px;
-font-weight:bold;
+.logo{
+font-size:55px;
+animation:float 3s infinite;
 }
 
-.header p{
-font-size:24px;
-margin-top:15px;
+h1{
+font-size:42px;
+margin-top:10px;
+}
+
+.subtitle{
+opacity:.9;
+margin-top:10px;
+font-size:18px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
 
 .card{
 background:white;
-color:black;
-width:90%;
-max-width:800px;
-margin:auto;
+color:#222;
 border-radius:25px;
-padding:30px;
-box-shadow:0 5px 20px rgba(0,0,0,.2);
+padding:25px;
+margin-bottom:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+transition:.3s;
 }
 
-.gift{
-font-size:100px;
+.card:hover{
+transform:translateY(-5px);
 }
 
-.judul{
-font-size:45px;
+.icon{
+font-size:70px;
+text-align:center;
+}
+
+.title{
+font-size:30px;
 font-weight:bold;
-margin-top:15px;
-}
-
-.sub{
-font-size:22px;
+text-align:center;
 margin-top:10px;
 }
 
-.btn{
-margin-top:30px;
-background:#ffd400;
-color:#003399;
-border:none;
-width:100%;
-padding:25px;
-font-size:40px;
+.desc{
+text-align:center;
+margin-top:10px;
+font-size:17px;
+}
+
+.reward{
+margin-top:15px;
+text-align:center;
 font-weight:bold;
-border-radius:20px;
+color:#009900;
+}
+
+.btn{
+display:block;
+width:100%;
+padding:18px;
+margin-top:20px;
+border:none;
+border-radius:15px;
+font-size:20px;
+font-weight:bold;
 cursor:pointer;
 }
 
-.timer-box{
-margin-top:25px;
-background:#eef5ff;
-padding:25px;
+.easy{
+background:#ff0000;
+color:white;
+}
+
+.hard{
+background:#ffd400;
+color:#003399;
+}
+
+.stats{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
 border-radius:20px;
-}
-
-#timer{
-font-size:80px;
-font-weight:bold;
-color:#0066ff;
-}
-
-.fitur{
-display:flex;
-justify-content:space-around;
-margin-top:25px;
-font-size:18px;
+padding:20px;
+text-align:center;
+margin-bottom:25px;
 }
 
 .footer{
-margin-top:30px;
-padding-bottom:30px;
-font-size:20px;
+text-align:center;
+padding:30px;
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:15px 25px;
+border-radius:15px;
+display:inline-block;
+font-weight:bold;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-10px);
+}
 }
 </style>
 </head>
@@ -104,73 +145,67 @@ font-size:20px;
 <body>
 
 <div class="header">
-<h1>🎁 DANA KAGET</h1>
-<p>Klaim hadiah spesial untuk kamu!</p>
+<div class="logo">🎁</div>
+<h1>Dysta Shop</h1>
+<div class="subtitle">
+Selesaikan misi dan klaim hadiah
+</div>
+</div>
+
+<div class="container">
+
+<div class="stats">
+🏆 Misi Aktif Hari Ini
+<br><br>
+🔥 Bonus tersedia untuk peserta yang menyelesaikan misi
 </div>
 
 <div class="card">
+<div class="icon">▶️</div>
+<div class="title">Misi Mudah</div>
 
-<div class="gift">🎁</div>
-
-<div class="judul">
-KLAIM HADIAH SEKARANG!
+<div class="desc">
+Subscribe channel YouTube dan lanjutkan ke halaman hadiah.
 </div>
 
-<div class="sub">
-Jangan lewatkan kesempatan ini.
+<div class="reward">
+🎁 Reward: Rp500
 </div>
 
-<button class="btn" onclick="mulai()">
-🎁 KLAIM SEKARANG
+<button class="btn easy"
+onclick="window.open('https://youtube.com/')">
+KERJAKAN MISI MUDAH
+</button>
+</div>
+
+<div class="card">
+<div class="icon">💎</div>
+
+<div class="title">Misi Sulit</div>
+
+<div class="desc">
+Selesaikan misi premium melalui link yang tersedia.
+</div>
+
+<div class="reward">
+🎁 Reward: Rp2.000
+</div>
+
+<button class="btn hard"
+onclick="window.location.href='https://go.paid4link.com/hz3ICfSf'">
+KERJAKAN MISI SULIT
 </button>
 
-<div class="timer-box">
-<p>Tunggu sebentar sebelum melanjutkan</p>
-<div id="timer">10</div>
-</div>
-
-<div class="fitur">
-<div>✅ Aman</div>
-<div>⚡ Cepat</div>
-<div>🎁 Gratis</div>
 </div>
 
 </div>
 
 <div class="footer">
-🔒 Data Anda aman bersama kami
+<a class="whatsapp"
+href="https://wa.me/627736952017">
+📞 Hubungi Admin
+</a>
 </div>
-
-<script>
-
-document.getElementById("timer").style.display="none";
-
-function mulai(){
-
-let s=10;
-
-document.getElementById("timer").style.display="block";
-
-let x=setInterval(function(){
-
-document.getElementById("timer").innerHTML=s;
-
-s--;
-
-if(s<0){
-
-clearInterval(x);
-
-window.location.href=
-"https://go.paid4link.com/hz3ICfSf";
-
-}
-
-},1000);
-
-}
-
-</script>
 
 </body>
 </html>
